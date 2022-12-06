@@ -6,6 +6,7 @@ Wizard::Wizard(std::string name) :Character(name)
     this->SetHealth(0);
     this->SetDamage(0);
     this->Sethealing(0);
+    this->toverstok.length = 10;
 
 }
 
@@ -50,10 +51,32 @@ void Wizard::Sethealing(int heal)
     GetHeal = heal;
 }
 
+
 int Wizard::GetHealing()
 {
     return GetHeal;
 }
+
+ void Wizard::SetBlock(int Block)
+{
+     Block = rand() % 100;
+
+     if(Block <= 45)
+     {
+         GetBLck = true;
+     }
+     else
+     {
+         GetBLck = false;
+     }
+
+}
+
+ int Wizard::GetBlock()
+ {
+     return GetBLck;
+ }
+
 
 Wizard::~Wizard()
 {

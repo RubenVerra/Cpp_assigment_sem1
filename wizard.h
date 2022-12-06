@@ -3,11 +3,13 @@
 
 #include <time.h>
 #include "character.h"
+#include "wand.h"
 
 class Wizard : public Character
 {
 public:
     Wizard(std::string name);
+    Wand toverstok;
 
     //setters
     void SetHealth (int hp);
@@ -21,8 +23,7 @@ public:
     int GetHealing();
     int GetBlock();
 
-    void healing (int heal);
-
+    //destructor
     virtual ~Wizard();
 };
 

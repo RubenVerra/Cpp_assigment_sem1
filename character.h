@@ -3,6 +3,7 @@
 #include<string>
 #include<iostream>
 #include <time.h>
+#include "wand.h"
 
 class Character
 {
@@ -13,13 +14,13 @@ public:
     virtual void SetHealth (int hp) = 0;
     virtual void SetDamage (int dmg) = 0;
     virtual void Sethealing (int heal) = 0;
-//    virtual void SetBlock(int Block) = 0;
+    virtual void SetBlock(int Block) = 0;
 
     //getter
     virtual int GetHealth() = 0;
     virtual int GetDamage() = 0;
     virtual int GetHealing()= 0;
-    //virtual int GetBlock() = 0;
+    virtual int GetBlock() = 0;
 
     //destructor
     virtual ~Character();
@@ -40,7 +41,8 @@ protected:
     int GetHeal;
 
     //Block
-    //int Block
+    int Block;
+    bool GetBLck;
 };
 
 #endif // CHARACTER_H

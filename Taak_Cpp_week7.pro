@@ -14,4 +14,5 @@ HEADERS += \
     character.h \
     healer.h \
     knight.h \
+    wand.h \
     wizard.h

@@ -50,11 +50,31 @@ void Knight:: Sethealing(int heal)
     GetHeal = heal;
 }
 
+
 int Knight::GetHealing()
 {
     return GetHeal;
 }
 
+void Knight::SetBlock(int Block)
+{
+    Block = rand() % 100;
+
+    if(Block <= 20)
+    {
+        GetBLck = true;
+    }
+    else
+    {
+        GetBLck = false;
+    }
+
+}
+
+int Knight::GetBlock()
+{
+    return GetBLck;
+}
 
 Knight::~Knight()
 {

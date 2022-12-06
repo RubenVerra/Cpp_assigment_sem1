@@ -51,11 +51,33 @@ void Healer::Sethealing(int heal)
     GetHeal = heal;
 }
 
+
+
 int Healer::GetHealing()
 {
-   return GetHeal;
+    return GetHeal;
 }
 
+
+void Healer::SetBlock(int Block)
+{
+    Block = rand() % 100;
+
+    if(Block <= 30)
+    {
+        GetBLck = true;
+    }
+    else
+    {
+        GetBLck = false;
+    }
+
+}
+
+int Healer::GetBlock()
+{
+    return GetBLck;
+}
 
 
 Healer::~Healer()

@@ -13,13 +13,16 @@ public:
     void SetHealth (int hp);
     void SetDamage (int dmg);
     void Sethealing (int heal);
+    void SetBlock(int Block);
 
 
     //getters
     int GetHealth();
     int GetDamage();
     int GetHealing();
+    int GetBlock();
 
+    //destructor
     virtual ~Healer();
 
 

@@ -4,6 +4,7 @@
 #include "wizard.h"
 #include "knight.h"
 #include "healer.h"
+#include "wand.h"
 
 using namespace std;
 
@@ -21,6 +22,8 @@ int main()
     a = new Wizard("Harry Potter");
     b = new Knight("lancelot");
     c = new Healer("mercy");
+
+
 
     std::cout << "________________________________________________" << std::endl;
     std::cout << "stats of the characters: " << std::endl;
