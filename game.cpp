@@ -34,19 +34,14 @@ void Game::ChooseChar()
     if(InputUser == 1)
     {
         Player = new Wizard("Harry Potter");
-        std::cout << " you are -> Wizard " << std::endl;
-
     }
     else if(InputUser == 2)
     {
         Player = new Knight("Lancelot");
-        std::cout << " you are -> Knight " << std::endl;
-
     }
     else if(InputUser == 3)
     {
         Player = new Healer("Mercy");
-        std::cout << " you are -> Healer " << std::endl;
     }
     else
     {
@@ -65,19 +60,14 @@ void Game::GenerateEnemy()
     if(x == 0)
     {
         Enemy = new Wizard("Voldemort");
-        std::cout << " <Enemy is -> Wizard " << std::endl;
     }
     else if(x == 1)
     {
         Enemy = new Knight("DarkKnight");
-        std::cout << " <Enemy is -> Knight " << std::endl;
-
     }
     else if(x == 2)
     {
         Enemy = new Healer("Moira");
-        std::cout << " <Enemy is -> Healer " << std::endl;
-
     }
     else
     {

@@ -22,10 +22,7 @@ bool Character::hit(int damage)
     return Gethp > 0;
 }
 
-bool Character::getLive()
-{
-    return live;
-}
+
 
 void Character::setLive(bool newLive)
 {

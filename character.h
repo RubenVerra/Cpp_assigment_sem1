@@ -25,7 +25,7 @@ public:
     virtual int GetDamage() = 0;
     virtual int GetHealing()= 0;
     virtual int GetBlock() = 0;
-    bool getLive();
+
 
 
 
