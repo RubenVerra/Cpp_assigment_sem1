@@ -10,10 +10,10 @@ int main()
     Game *newWorld;
     newWorld = new Game();
 
-    newWorld->Play();
     newWorld->ChooseChar();
     newWorld->GenerateEnemy();
     newWorld->PrintStats();
+    newWorld->Play();
 
     delete newWorld;
 

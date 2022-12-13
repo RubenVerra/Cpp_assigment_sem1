@@ -31,28 +31,27 @@ void Game::ChooseChar()
     std::cout << " ------------------------------------ " << std::endl;
 
 
-    Character* Player;
     if(InputUser == 1)
-        {
-            Player = new Wizard("Harry Potter");
-            std::cout << " you are -> Wizard " << std::endl;
+    {
+        Player = new Wizard("Harry Potter");
+        std::cout << " you are -> Wizard " << std::endl;
 
-        }
+    }
     else if(InputUser == 2)
-        {
-            Player = new Knight("Lancelot");
-            std::cout << " you are -> Knight " << std::endl;
+    {
+        Player = new Knight("Lancelot");
+        std::cout << " you are -> Knight " << std::endl;
 
-        }
+    }
     else if(InputUser == 3)
-        {
-            Player = new Healer("Mercy");
-            std::cout << " you are -> Healer " << std::endl;
-        }
+    {
+        Player = new Healer("Mercy");
+        std::cout << " you are -> Healer " << std::endl;
+    }
     else
-        {
-            std::cout << "something went wrong " << std::endl;
-        }
+    {
+        std::cout << "something went wrong " << std::endl;
+    }
 
 }
 
@@ -62,8 +61,6 @@ void Game::GenerateEnemy()
 
     int x = rand() % 3 ;
 
-
-    Character *Enemy;
 
     if(x == 0)
     {
@@ -134,6 +131,16 @@ void Game::Play()
 
     if(InputUser == 1)
     {
+        while(true)
+        {
+            std::cout << "-" << Player->GetDamage() << std::endl;
+            if( ! Enemy->hit(Player->GetDamage()) )
+            {
+                std::cout << "DEAD !!!" << std::endl;
+                break;
+            }
+            std::cout << Enemy->getName() << " HP=" << Enemy->GetHealth() << std::endl;
+        }
 
     }
     else if(InputUser == 2)

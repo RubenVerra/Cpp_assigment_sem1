@@ -16,9 +16,10 @@ std::string &Character::getName()
     return name;
 }
 
-bool Character::alive(bool live)
+bool Character::hit(int damage)
 {
-    return live;
+    Gethp -= damage;
+    return Gethp > 0;
 }
 
 bool Character::getLive()

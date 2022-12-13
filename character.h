@@ -27,25 +27,27 @@ public:
     virtual int GetBlock() = 0;
     bool getLive();
 
-    virtual bool alive(bool live);
+
+
+    bool hit(int damage);
 
 protected:
     std::string name;
 
     //health
-    int hp;
+    //int hp;
     int Gethp;
 
     //damage
-    int dmg;
+    //int dmg;
     int Getdmg;
 
     //healing
-    int heal;
+    //int heal;
     int GetHeal;
 
     //Block
-    int Block;
+    //int Block;
     int GetBLck;
 
     //bool alive
