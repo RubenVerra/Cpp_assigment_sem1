@@ -6,6 +6,7 @@ Healer::Healer(std::string name) : Character(name)
     this->SetHealth(0);
     this->SetDamage(0);
     this->Sethealing(0);
+    this->SetBlock(0);
 
 }
 
@@ -61,17 +62,8 @@ int Healer::GetHealing()
 
 void Healer::SetBlock(int Block)
 {
-    Block = rand() % 100;
-
-    if(Block <= 30)
-    {
-        GetBLck = true;
-    }
-    else
-    {
-        GetBLck = false;
-    }
-
+    Block = rand() % 5;
+    GetBLck = Block;
 }
 
 int Healer::GetBlock()

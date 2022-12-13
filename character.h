@@ -42,7 +42,7 @@ protected:
 
     //Block
     int Block;
-    bool GetBLck;
+    int GetBLck;
 };
 
 #endif // CHARACTER_H

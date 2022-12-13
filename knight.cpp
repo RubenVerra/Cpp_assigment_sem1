@@ -6,6 +6,7 @@ Knight::Knight(std::string name) :Character(name)
     this->SetHealth(0);
     this->SetDamage(0);
     this->Sethealing(0);
+    this->SetBlock(0);
 
 }
 
@@ -29,7 +30,7 @@ int Knight::GetHealth()
 
 void Knight::SetDamage(int dmg)
 {
-    dmg = rand() % 40;
+    dmg = rand() % 4;
     if(dmg < 20)
     {
         dmg += 20;
@@ -58,17 +59,8 @@ int Knight::GetHealing()
 
 void Knight::SetBlock(int Block)
 {
-    Block = rand() % 100;
-
-    if(Block <= 20)
-    {
-        GetBLck = true;
-    }
-    else
-    {
-        GetBLck = false;
-    }
-
+    Block = rand() % 4;
+    GetBLck = Block;
 }
 
 int Knight::GetBlock()

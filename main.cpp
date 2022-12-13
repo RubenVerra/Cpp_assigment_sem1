@@ -59,6 +59,12 @@ int main()
     std::cout << "healing van Knight: " << b->GetHealing() << std::endl;
     std::cout << "healing van Healer: " << c->GetHealing() << std::endl;
 
+    std::cout << std::endl;
+
+    std::cout << "block van Wizard: " << a->GetBlock() << std::endl;
+    std::cout << "block van Knight: " << b->GetBlock() << std::endl;
+    std::cout << "block van Healer: " << c->GetBlock() << std::endl;
+
     std::cout << "________________________________________________" << std::endl;
 
     //game
