@@ -129,6 +129,9 @@ void Game::Play()
              std::cout<< "try again" << std::endl;
              std::cin >> InputUser;
         }
+
+    std::cout << " ------------------------------------ " << std::endl;
+
     if(InputUser == 1)
     {
 
@@ -136,11 +139,13 @@ void Game::Play()
     else if(InputUser == 2)
     {
         std::cout<< "abort game!" << std::endl;
+        return;
 
     }
     else
     {
         std::cout<< "somthing went wrong" << std::endl;
+        return;
     }
 
 }
