@@ -3,7 +3,6 @@
 #include<string>
 #include<iostream>
 #include <time.h>
-#include "wand.h"
 class Character
 {
 public:
@@ -17,7 +16,6 @@ public:
     virtual void SetDamage (int dmg) = 0;
     virtual void Sethealing (int heal) = 0;
     virtual void SetBlock(int Block) = 0;
-    void setLive(bool newLive);
 
     //getter
     virtual std::string &getName();

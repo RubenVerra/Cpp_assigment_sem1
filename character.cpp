@@ -22,13 +22,6 @@ bool Character::hit(int damage)
     return Gethp > 0;
 }
 
-
-
-void Character::setLive(bool newLive)
-{
-    live = newLive;
-}
-
 std::string Character::setName(const std::string &newName)
 {
     return(newName);
