@@ -17,11 +17,5 @@ int main()
 
     delete newWorld;
 
-
-
-
-
-
-
     return 0;
 }

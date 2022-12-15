@@ -31,6 +31,7 @@ public:
 
     bool hit(int damage);
     bool heal(int hitpoints);
+    bool BlockAttack(int block, int damage);
 
 protected:
     std::string name;

@@ -22,22 +22,33 @@ bool Character::hit(int damage)
     return Gethp > 0;
 }
 
-<<<<<<< Updated upstream
-=======
 bool Character::heal(int hitpoints)
 {
    Gethp += hitpoints;
    return Gethp > 0;
 }
 
-
-
-void Character::setLive(bool newLive)
+bool Character::BlockAttack(int block, int damage)
 {
-    live = newLive;
+    if(block > 0)
+    {
+      Gethp += damage;
+      GetBLck = GetBLck - 1;
+
+      return Gethp > 0;
+    }
+    else
+    {
+      std::cout << "No blocks left: damage has been done." << name << std::endl;
+    }
+      return 0;
 }
 
->>>>>>> Stashed changes
+
+
+
+
+
 std::string Character::setName(const std::string &newName)
 {
     return(newName);

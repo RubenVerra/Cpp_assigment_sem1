@@ -121,7 +121,7 @@ void Game::Play()
 
     if(InputUser == 1)
     {
-        while(Player->GetHealth() > 0 || Enemy->GetHealth() > 0)
+        while(Player->GetHealth() > 0 && Enemy->GetHealth() > 0)
         {
             std::cout << "-" << Player->GetDamage() << std::endl;
             std::cout << "+" << Enemy->GetHealing() << std::endl;
@@ -132,6 +132,8 @@ void Game::Play()
             }
             std::cout << Enemy->getName() << " HP=" << Enemy->GetHealth() << std::endl;
             Enemy->heal(Enemy->GetHealing());
+            Enemy->BlockAttack(Enemy->GetBlock(), Player->GetDamage());
+            std::cout << Enemy->getName() << " blocks left =" << Enemy->GetBlock() << std::endl;
             std::cout << Enemy->getName() << " HP=" << Enemy->GetHealth() << std::endl;
         }
 
