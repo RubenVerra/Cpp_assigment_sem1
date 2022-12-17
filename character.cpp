@@ -9,7 +9,7 @@ Character::Character(std::string name): name(name)
 
 Character::~Character()
 {
-    std::cout << "destruct Character" << name << std::endl;
+   // std::cout << "destruct Character" << name << std::endl;
 }
 std::string &Character::getName()
 {
@@ -36,7 +36,7 @@ int Character::GetBlock()
     return GetBLck;
 }
 
-bool Character::hit(int damage)
+int Character::hit(int damage)
 {
     hp -= damage;
     return hp > 0;

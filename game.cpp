@@ -236,6 +236,9 @@ void Game::Play()
         return;
     }
 
+    delete Player;
+    delete Enemy;
+
 }
 
 

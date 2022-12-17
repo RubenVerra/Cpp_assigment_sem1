@@ -47,5 +47,5 @@ void Wizard::Sethealing(int heal)
 
 Wizard::~Wizard()
 {
-    std::cout << "destruct Knight" << name << std::endl;
+    //std::cout << "destruct Knight" << name << std::endl;
 }

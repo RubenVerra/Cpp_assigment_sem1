@@ -57,7 +57,7 @@ protected:
     int GetBLck;
 
     // checks if character is alive
-    bool live = 1;
+    bool alive = 1;
 };
 
 #endif // CHARACTER_H

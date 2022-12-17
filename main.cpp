@@ -17,7 +17,9 @@ int main()
     std::cout << " ------------------------------------ " << std::endl;
     std::cin >> input;
     std::cout << " ------------------------------------ " << std::endl;
-    while (input) {
+
+    while (input)
+    {
         newWorld->ChooseChar();
         newWorld->GenerateEnemy();
         newWorld->PrintStats();

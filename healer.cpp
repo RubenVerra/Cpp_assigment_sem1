@@ -49,7 +49,7 @@ void Healer::SetBlock(int Block)
 
 Healer::~Healer()
 {
-    std::cout << "destruct Healer" << name << std::endl;
+   // std::cout << "destruct Healer" << name << std::endl;
 }
 
 
