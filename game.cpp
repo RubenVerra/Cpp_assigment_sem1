@@ -144,7 +144,7 @@ void Game::Play()
                 std::cout << "Your HP is: " << Player->GetHealth() << std::endl;
                 std::cout << " ------------------------------------ " << std::endl;
 
-                getHit = 1;
+
                 break;
             case 2:
 
@@ -155,11 +155,10 @@ void Game::Play()
                 break;
             case 3:
                 std::cout << "You block " << Enemy->getName() << std::endl;
-                if(getHit)
-                {
+
                 Player->BlockAttack(Player->GetBlock(), Enemy->GetDamage());
-                getHit = 0;
-                }
+
+
                 std::cout << "Your HP is: " << Player->GetHealth() << std::endl;
                 std::cout << " ------------------------------------ " << std::endl;
 
@@ -173,7 +172,7 @@ void Game::Play()
                 std::cout << "player has" << Player->GetBlock() << " blocks left" << std :: endl;
                 std::cout << Enemy->getName() << " HP is: " << Enemy->GetHealth() << std::endl;
                 std::cout << " ------------------------------------ " << std::endl;
-                getHit = 1;
+
                 break;
             case 1:
                 std::cout << Enemy->getName() << " tries to heal " << std::endl;
@@ -183,10 +182,9 @@ void Game::Play()
                 break;
             case 2:
                 std::cout << Enemy->getName() << " blocks your attack" << std::endl;
-                if(getHit)
-                {
+
                     Enemy->BlockAttack(Enemy->GetBlock(), Player->GetDamage());
-                }
+
                 std::cout << Enemy->getName() << " HP is: " << Enemy->GetHealth() << std::endl;
                 std::cout << " ------------------------------------ " << std::endl;
                 break;
