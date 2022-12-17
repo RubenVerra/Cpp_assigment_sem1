@@ -10,38 +10,38 @@ Knight::Knight(std::string name) :Character(name)
 
 }
 
-void Knight::SetHealth(int hp)
+void Knight::SetHealth(int hitpoints)
 {
-    hp = rand() % 500;
-    if(hp < 200)
+    hitpoints = rand() % 500;
+    if(hitpoints < 200)
     {
-       hp += 200;
+       hitpoints += 200;
     }
-    Gethp = hp;
+    hp = hitpoints;
     //std::cout << name << "health van Knight: " << hp << std::endl;
 }
 
 int Knight::GetHealth()
 {
-    return Gethp;
+    return hp;
 }
 
 
 
-void Knight::SetDamage(int dmg)
+void Knight::SetDamage(int damage)
 {
-    dmg = rand() % 4;
-    if(dmg < 20)
+    damage = rand() % 4;
+    if(damage < 20)
     {
-        dmg += 20;
+        damage += 20;
     }
-    Getdmg = dmg;
+    dmg = damage;
 
 }
 
 int Knight::GetDamage()
 {
-    return Getdmg;
+    return dmg;
 }
 
 

@@ -11,37 +11,37 @@ Wizard::Wizard(std::string name) :Character(name)
 
 }
 
-void Wizard::SetHealth(int hp)
+void Wizard::SetHealth(int hitpoints)
 {
-    hp = rand() % 300;
-    if(hp < 125)
+    hitpoints = rand() % 300;
+    if(hitpoints < 125)
     {
-      hp += 75;
+      hitpoints += 75;
     }
-     Gethp = hp;
+     hp = hitpoints;
 
 }
 
 int Wizard::GetHealth()
 {
-    return Gethp;
+    return hp;
 }
 
 
-void Wizard::SetDamage(int dmg)
+void Wizard::SetDamage(int damage)
 {
-    dmg = rand() % 75;
-    if(dmg < 35)
+    damage = rand() % 75;
+    if(damage < 35)
     {
-        dmg += 30;
+        damage += 30;
     }
-    Getdmg = dmg;
+    dmg = damage;
 
 }
 
 int Wizard::GetDamage()
 {
-    return Getdmg;
+    return dmg;
 }
 
 

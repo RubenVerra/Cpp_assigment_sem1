@@ -18,28 +18,28 @@ std::string &Character::getName()
 
 bool Character::hit(int damage)
 {
-    Gethp -= damage;
-    return Gethp > 0;
+    hp -= damage;
+    return hp > 0;
 }
 
 bool Character::heal(int hitpoints)
 {
-   Gethp += hitpoints;
-   return Gethp > 0;
+   hp += hitpoints;
+   return hp > 0;
 }
 
 bool Character::BlockAttack(int block, int damage)
 {
     if(block > 0)
     {
-      Gethp += damage;
+      hp += damage;
       GetBLck = GetBLck - 1;
 
-      return Gethp > 0;
+      return hp > 0;
     }
     else
     {
-      std::cout << "No blocks left: damage has been done." << name << std::endl;
+      std::cout << "No blocks left: damage has been done." << std::endl;
     }
       return 0;
 }

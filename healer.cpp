@@ -11,35 +11,35 @@ Healer::Healer(std::string name) : Character(name)
 
 }
 
-void Healer::SetHealth(int hp)
+void Healer::SetHealth(int hitpoints)
 {
-    hp = rand() % 200;
-    if(hp < 50)
+    hitpoints = rand() % 200;
+    if(hitpoints < 50)
     {
-        hp += 50;
+        hitpoints += 50;
     }
-     Gethp = hp;
+     hp = hitpoints;
 }
 
 int Healer::GetHealth()
 {
-    return Gethp;
+    return hp;
 }
 
 
-void Healer::SetDamage(int dmg)
+void Healer::SetDamage(int damage)
 {
-    dmg = rand() % 20;
-    if(dmg < 5)
+    damage = rand() % 20;
+    if(damage < 5)
     {
-        dmg += 5;
+        damage += 5;
     }
-        Getdmg = dmg;
+        dmg = damage;
 }
 
 int Healer::GetDamage()
 {
-    return Getdmg;
+    return dmg;
 }
 
 

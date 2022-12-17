@@ -1,5 +1,5 @@
 #include "game.h"
-#include "character.h"
+//#include "character.h"
 #include "wizard.h"
 #include "knight.h"
 #include "healer.h"
@@ -120,10 +120,11 @@ void Game::Play()
 
     if(InputUser == 1)
     {
+        bool getHit = 0;
         while(Player->GetHealth() > 0 && Enemy->GetHealth() > 0)
         {
-            int ai = rand() % 3;;
-            if( ! Enemy->hit(Player->GetDamage()) )
+            int ai = rand() % 3;
+            if( Player->GetHealth() <= 0 || Enemy->GetHealth() <= 0 )//! Enemy->hit(Player->GetDamage())
                 {
                   std::cout << "DEAD !!!" << std::endl;
                   break;
@@ -140,6 +141,7 @@ void Game::Play()
                 std::cout << "-" <<Player->GetDamage() << std::endl;
                 Enemy->hit(Player->GetDamage());
                 std::cout << "Your HP is: " << Player->GetHealth() << std::endl;
+                getHit = 1;
                 break;
             case 2:
 
@@ -149,7 +151,10 @@ void Game::Play()
                 break;
             case 3:
                 std::cout << "You block " << Enemy->getName() << std::endl;
+                if(getHit)
+                {
                 Player->BlockAttack(Player->GetBlock(), Enemy->GetDamage());
+                }
                 std::cout << "Your HP is: " << Player->GetHealth() << std::endl;
                 break;
             }
@@ -159,6 +164,7 @@ void Game::Play()
                 std::cout << "-" <<Enemy->GetDamage() << std::endl;
                 Player->hit(Enemy->GetDamage());
                 std::cout << Enemy->getName() << " HP is: " << Enemy->GetHealth() << std::endl;
+                getHit = 1;
                 break;
             case 1:
                 std::cout << Enemy->getName() << " tries to heal " << std::endl;
@@ -167,27 +173,15 @@ void Game::Play()
                 break;
             case 2:
                 std::cout << Enemy->getName() << " blocks your attack" << std::endl;
-                Enemy->BlockAttack(Enemy->GetBlock(), Player->GetDamage());
+                if(getHit)
+                {
+                    Enemy->BlockAttack(Enemy->GetBlock(), Player->GetDamage());
+                }
                 std::cout << Enemy->getName() << " HP is: " << Enemy->GetHealth() << std::endl;
                 break;
             }
+            std::cout << "Your HP is: " << Player->GetHealth() << std::endl;
 
-
-
-
-
-//            std::cout << "-" << Player->GetDamage() << std::endl;
-//            std::cout << "+" << Enemy->GetHealing() << std::endl;
-//            if( ! Enemy->hit(Player->GetDamage()) )
-//            {
-//                std::cout << "DEAD !!!" << std::endl;
-//                break;
-//            }
-//            std::cout << Enemy->getName() << " HP=" << Enemy->GetHealth() << std::endl;
-//            Enemy->heal(Enemy->GetHealing());
-//            Enemy->BlockAttack(Enemy->GetBlock(), Player->GetDamage());
-//            std::cout << Enemy->getName() << " blocks left =" << Enemy->GetBlock() << std::endl;
-//            std::cout << Enemy->getName() << " HP=" << Enemy->GetHealth() << std::endl;
         }
 
     }

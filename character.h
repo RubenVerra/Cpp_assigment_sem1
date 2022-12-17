@@ -37,12 +37,12 @@ protected:
     std::string name;
 
     //health
-    //int hp;
-    int Gethp;
+    int hp;
+    //int Gethp;
 
     //damage
-    //int dmg;
-    int Getdmg;
+    int dmg;
+    //int Getdmg;
 
     //healing
     //int heal;
