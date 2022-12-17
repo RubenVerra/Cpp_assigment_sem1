@@ -47,7 +47,16 @@ int Character::BlockAttack(int block, int damage)
 
 int Character::MissBlock(int block)
 {
-
+    if(block > 0)
+    {
+        GetBLck = GetBlock() - 1;
+        return GetBLck;
+    }
+    else
+    {
+      std::cout << "No blocks left: damage has been done." << std::endl;
+    }
+    return 0;
 }
 
 
