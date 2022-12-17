@@ -123,18 +123,72 @@ void Game::Play()
     {
         while(Player->GetHealth() > 0 && Enemy->GetHealth() > 0)
         {
-            std::cout << "-" << Player->GetDamage() << std::endl;
-            std::cout << "+" << Enemy->GetHealing() << std::endl;
+            int ai = rand() % 3;;
             if( ! Enemy->hit(Player->GetDamage()) )
-            {
-                std::cout << "DEAD !!!" << std::endl;
+                {
+                  std::cout << "DEAD !!!" << std::endl;
+                  break;
+                }
+            InputUser = 0;
+            std::cout << "What is your action?" << std::endl;
+            std::cout << "1: to attack" << std::endl;
+            std::cout << "2: to Heal" << std::endl;
+            std::cout << "3: to block" << std::endl;
+            std::cin >> InputUser;
+            switch (InputUser) {
+            case 1:
+                std::cout << "You attack " << Enemy->getName() << std::endl;
+                std::cout << "-" <<Player->GetDamage() << std::endl;
+                Enemy->hit(Player->GetDamage());
+                std::cout << "Your HP is: " << Player->GetHealth() << std::endl;
+                break;
+            case 2:
+
+                std::cout << "You Heal " << Player->GetHealing() << "HP" << std::endl;
+                Player->heal(Player->GetHealing());
+                std::cout << "Your HP is: " << Player->GetHealth() << std::endl;
+                break;
+            case 3:
+                std::cout << "You block " << Enemy->getName() << std::endl;
+                Player->BlockAttack(Player->GetBlock(), Enemy->GetDamage());
+                std::cout << "Your HP is: " << Player->GetHealth() << std::endl;
                 break;
             }
-            std::cout << Enemy->getName() << " HP=" << Enemy->GetHealth() << std::endl;
-            Enemy->heal(Enemy->GetHealing());
-            Enemy->BlockAttack(Enemy->GetBlock(), Player->GetDamage());
-            std::cout << Enemy->getName() << " blocks left =" << Enemy->GetBlock() << std::endl;
-            std::cout << Enemy->getName() << " HP=" << Enemy->GetHealth() << std::endl;
+            switch (ai) {
+            case 0:
+                std::cout << Enemy->getName() << " attacks you" << std::endl;
+                std::cout << "-" <<Enemy->GetDamage() << std::endl;
+                Player->hit(Enemy->GetDamage());
+                std::cout << Enemy->getName() << " HP is: " << Enemy->GetHealth() << std::endl;
+                break;
+            case 1:
+                std::cout << Enemy->getName() << " tries to heal " << std::endl;
+                Enemy->heal(Enemy->GetHealing());
+                std::cout << Enemy->getName() << " HP is: " << Enemy->GetHealth() << std::endl;
+                break;
+            case 2:
+                std::cout << Enemy->getName() << " blocks your attack" << std::endl;
+                Enemy->BlockAttack(Enemy->GetBlock(), Player->GetDamage());
+                std::cout << Enemy->getName() << " HP is: " << Enemy->GetHealth() << std::endl;
+                break;
+            }
+
+
+
+
+
+//            std::cout << "-" << Player->GetDamage() << std::endl;
+//            std::cout << "+" << Enemy->GetHealing() << std::endl;
+//            if( ! Enemy->hit(Player->GetDamage()) )
+//            {
+//                std::cout << "DEAD !!!" << std::endl;
+//                break;
+//            }
+//            std::cout << Enemy->getName() << " HP=" << Enemy->GetHealth() << std::endl;
+//            Enemy->heal(Enemy->GetHealing());
+//            Enemy->BlockAttack(Enemy->GetBlock(), Player->GetDamage());
+//            std::cout << Enemy->getName() << " blocks left =" << Enemy->GetBlock() << std::endl;
+//            std::cout << Enemy->getName() << " HP=" << Enemy->GetHealth() << std::endl;
         }
 
     }
