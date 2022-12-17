@@ -28,19 +28,21 @@ void Game::ChooseChar()
 
         }
     std::cout << " ------------------------------------ " << std::endl;
-
+    std::string newName;
+    std::cout << "type the name of your hero ";
+    std::cin >> newName;
 
     if(InputUser == 1)
     {
-        Player = new Wizard("Harry Potter");
+        Player = new Wizard(newName);
     }
     else if(InputUser == 2)
     {
-        Player = new Knight("Lancelot");
+        Player = new Knight(newName);
     }
     else if(InputUser == 3)
     {
-        Player = new Healer("Mercy");
+        Player = new Healer(newName);
     }
     else
     {
@@ -79,12 +81,12 @@ void Game::PrintStats()
     std::cout << "stats of the characters: " << std::endl;
     std::cout << std::endl;
 
-    std::cout << "health player: " <<  Player->GetHealth() << std::endl;
+    std::cout << "health Player: " <<  Player->GetHealth() << std::endl;
     std::cout << "health Enemy: " <<  Enemy->GetHealth() << std::endl;
 
     std::cout << std::endl;
 
-    std::cout << "damage van PLayer: " << Player->GetDamage() << std::endl;
+    std::cout << "damage van Player: " << Player->GetDamage() << std::endl;
     std::cout << "damage van Enemy: " << Enemy->GetDamage() << std::endl;
 
     std::cout << std::endl;
@@ -211,12 +213,12 @@ void Game::Play()
 
             if( Player->GetHealth() <= 0 )
             {
-            std::cout << "You are DEAD !!!" << std::endl;
+            std::cout << Player->getName() <<" has died!!!" << std::endl;
             break;
             }
             if( Enemy->GetHealth() <= 0)
             {
-            std::cout << "your enemy has been slain !!!" << std::endl;
+            std::cout << Player->getName()<< " has won !! And your enemy has been slain !!!" << std::endl;
             break;
             }
         }
