@@ -21,12 +21,6 @@ void Healer::SetHealth(int hitpoints)
      hp = hitpoints;
 }
 
-int Healer::GetHealth()
-{
-    return hp;
-}
-
-
 void Healer::SetDamage(int damage)
 {
     damage = rand() % 20;
@@ -36,12 +30,6 @@ void Healer::SetDamage(int damage)
     }
         dmg = damage;
 }
-
-int Healer::GetDamage()
-{
-    return dmg;
-}
-
 
 void Healer::Sethealing(int heal)
 {
@@ -53,25 +41,11 @@ void Healer::Sethealing(int heal)
     GetHeal = heal;
 }
 
-
-
-int Healer::GetHealing()
-{
-    return GetHeal;
-}
-
-
 void Healer::SetBlock(int Block)
 {
     Block = rand() % 5;
     GetBLck = Block;
 }
-
-int Healer::GetBlock()
-{
-    return GetBLck;
-}
-
 
 Healer::~Healer()
 {

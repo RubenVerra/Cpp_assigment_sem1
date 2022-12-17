@@ -16,6 +16,26 @@ std::string &Character::getName()
     return name;
 }
 
+int Character::GetHealth()
+{
+    return hp;
+}
+
+int Character::GetDamage()
+{
+    return dmg;
+}
+
+int Character::GetHealing()
+{
+    return GetHeal;
+}
+
+int Character::GetBlock()
+{
+    return GetBLck;
+}
+
 bool Character::hit(int damage)
 {
     hp -= damage;
@@ -68,3 +88,4 @@ std::string Character::setName(const std::string &newName)
 {
     return(newName);
 }
+

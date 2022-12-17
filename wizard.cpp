@@ -22,12 +22,6 @@ void Wizard::SetHealth(int hitpoints)
 
 }
 
-int Wizard::GetHealth()
-{
-    return hp;
-}
-
-
 void Wizard::SetDamage(int damage)
 {
     damage = rand() % 75;
@@ -39,23 +33,10 @@ void Wizard::SetDamage(int damage)
 
 }
 
-int Wizard::GetDamage()
-{
-    return dmg;
-}
-
-
-
 void Wizard::Sethealing(int heal)
 {
     heal = 0;
     GetHeal = heal;
-}
-
-
-int Wizard::GetHealing()
-{
-    return GetHeal;
 }
 
  void Wizard::SetBlock(int Block)
@@ -63,12 +44,6 @@ int Wizard::GetHealing()
      Block = rand() % 4;
      GetBLck = Block;
 }
-
- int Wizard::GetBlock()
- {
-     return GetBLck;
- }
-
 
 Wizard::~Wizard()
 {

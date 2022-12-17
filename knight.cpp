@@ -21,13 +21,6 @@ void Knight::SetHealth(int hitpoints)
     //std::cout << name << "health van Knight: " << hp << std::endl;
 }
 
-int Knight::GetHealth()
-{
-    return hp;
-}
-
-
-
 void Knight::SetDamage(int damage)
 {
     damage = rand() % 4;
@@ -39,33 +32,16 @@ void Knight::SetDamage(int damage)
 
 }
 
-int Knight::GetDamage()
-{
-    return dmg;
-}
-
-
 void Knight:: Sethealing(int heal)
 {
     heal = 0;
     GetHeal = heal;
 }
 
-
-int Knight::GetHealing()
-{
-    return GetHeal;
-}
-
 void Knight::SetBlock(int Block)
 {
     Block = rand() % 4;
     GetBLck = Block;
-}
-
-int Knight::GetBlock()
-{
-    return GetBLck;
 }
 
 Knight::~Knight()

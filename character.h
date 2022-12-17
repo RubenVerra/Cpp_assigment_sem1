@@ -21,10 +21,10 @@ public:
 
     //getter
     virtual std::string &getName();
-    virtual int GetHealth() = 0;
-    virtual int GetDamage() = 0;
-    virtual int GetHealing()= 0;
-    virtual int GetBlock() = 0;
+    int GetHealth();
+    int GetDamage();
+    int GetHealing();
+    virtual int GetBlock();
 
 
 
@@ -54,7 +54,7 @@ protected:
     int GetBLck;
 
     //bool alive
-    bool live = 1;
+    bool alive = 1;
 };
 
 #endif // CHARACTER_H

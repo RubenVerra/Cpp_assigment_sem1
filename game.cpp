@@ -120,15 +120,9 @@ void Game::Play()
 
     if(InputUser == 1)
     {
-        bool getHit = 0;
         while(Player->GetHealth() > 0 && Enemy->GetHealth() > 0)
         {
             int ai = rand() % 3;
-            if( Player->GetHealth() <= 0 || Enemy->GetHealth() <= 0 )//! Enemy->hit(Player->GetDamage())
-                {
-                  std::cout << "DEAD !!!" << std::endl;
-                  break;
-                }
             InputUser = 0;
             std::cout << "What is your action?" << std::endl;
             std::cout << "1: to attack" << std::endl;
@@ -215,6 +209,16 @@ void Game::Play()
             std::cout << "Your HP is: " << Player->GetHealth() << std::endl;
             std::cout << " ------------------------------------ " << std::endl;
 
+            if( Player->GetHealth() <= 0 )
+            {
+            std::cout << "You are DEAD !!!" << std::endl;
+            break;
+            }
+            if( Enemy->GetHealth() <= 0)
+            {
+            std::cout << "your enemy has been slain !!!" << std::endl;
+            break;
+            }
         }
 
     }

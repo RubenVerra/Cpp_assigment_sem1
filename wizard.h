@@ -17,12 +17,6 @@ public:
     void Sethealing (int heal);
     void SetBlock(int Block);
 
-    //getters
-    int GetHealth();
-    int GetDamage();
-    int GetHealing();
-    int GetBlock();
-
     //destructor
     virtual ~Wizard();
 };
