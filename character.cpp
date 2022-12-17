@@ -22,18 +22,19 @@ bool Character::hit(int damage)
     return hp > 0;
 }
 
-bool Character::heal(int hitpoints)
+int Character::heal(int hitpoints)
 {
    hp += hitpoints;
    return hp > 0;
 }
 
-bool Character::BlockAttack(int block, int damage)
+int Character::BlockAttack(int block, int damage)
 {
     if(block > 0)
     {
       hp += damage;
-      GetBLck = GetBLck - 1;
+      GetBLck = GetBlock() - 1;
+
 
       return hp > 0;
     }
