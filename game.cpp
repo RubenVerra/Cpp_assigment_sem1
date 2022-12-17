@@ -4,7 +4,6 @@
 #include "knight.h"
 #include "healer.h"
 
-
 Game::Game()
 {
 

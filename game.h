@@ -8,7 +8,6 @@
 
 
 
-
 class Game
 {
 public:
@@ -22,7 +21,6 @@ public:
     void Play();
 
 private:
-
     Character *Enemy = nullptr;
     Character *Player = nullptr;
 
