@@ -12,6 +12,10 @@ Knight::Knight(std::string name) :Character(name)
 
 void Knight::biograph(int age, int length, std::string origin, bool gender)
 {
+    age = 37;
+    length = 192;
+    origin = "germany";
+    gender = 1;
 
     std::cout << "age: " << age <<std::endl;
     std::cout << "length: " << length <<std::endl;

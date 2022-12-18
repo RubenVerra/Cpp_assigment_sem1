@@ -13,6 +13,11 @@ Healer::Healer(std::string name) : Character(name)
 
 void Healer::biograph(int age, int length, std::string origin, bool gender)
 {
+    age = 22;
+    length = 180;
+    origin = "netherlands";
+    gender = 0;
+
 
     std::cout << "age: " << age <<std::endl;
     std::cout << "length: " << length <<std::endl;

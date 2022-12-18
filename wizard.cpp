@@ -13,6 +13,10 @@ Wizard::Wizard(std::string name) :Character(name)
 
 void Wizard::biograph(int age, int length, std::string origin, bool gender)
 {
+    age = 76;
+    length = 170;
+    origin = "Italy";
+    gender = 1;
 
     std::cout << "age: " << age <<std::endl;
     std::cout << "length: " << length <<std::endl;
