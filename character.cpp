@@ -55,11 +55,6 @@ int Character::MissBlock(int block)
     return 0;
 }
 
-
-
-
-
-
 std::string Character::setName(const std::string &newName)
 {
     return(newName);

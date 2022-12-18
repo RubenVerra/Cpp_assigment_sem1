@@ -19,7 +19,7 @@ public:
     virtual void SetDamage (int dmg) = 0;
     virtual void Sethealing (int heal) = 0;
     virtual void SetBlock(int Block) = 0;
-    virtual void biograph(int age = 0, int length = 0, std:: string origin = "", bool gender = 1) = 0;
+    virtual void biograph(int age = 0, int length = 0, std:: string origin = "", bool gender = 0) = 0;
 
 
     //getter
