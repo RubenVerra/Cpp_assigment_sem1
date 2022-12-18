@@ -11,32 +11,9 @@ Character::~Character()
 {
     std::cout << "destruct Character" << name << std::endl;
 }
-std::string &Character::getName()
-{
-    return name;
-}
 
-int Character::GetHealth()
-{
-    return hp;
-}
 
-int Character::GetDamage()
-{
-    return dmg;
-}
-
-int Character::GetHealing()
-{
-    return GetHeal;
-}
-
-int Character::GetBlock()
-{
-    return GetBLck;
-}
-
-bool Character::hit(int damage)
+int Character::hit(int damage)
 {
     hp -= damage;
     return hp > 0;
@@ -87,5 +64,16 @@ int Character::MissBlock(int block)
 std::string Character::setName(const std::string &newName)
 {
     return(newName);
+}
+
+bool Character::IsAlive(int hp)
+{
+    if(hp > 0)
+    {
+        return 1;
+    }else
+    {
+        return 0;
+    }
 }
 

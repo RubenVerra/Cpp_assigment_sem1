@@ -142,7 +142,7 @@ void Game::Play()
 
     if(InputUser == 1)
     {
-        while(Player->GetHealth() > 0 && Enemy->GetHealth() > 0)
+        while(Player->IsAlive(Player->GetHealth()) && Enemy->IsAlive(Enemy->GetHealth()))
         {
             int ai = rand() % 3;
             InputUser = 0;
@@ -231,16 +231,14 @@ void Game::Play()
             std::cout << "Your HP is: " << Player->GetHealth() << std::endl;
             std::cout << " ------------------------------------ " << std::endl;
 
-            if( Player->GetHealth() <= 0 )
-            {
-            std::cout << Player->getName() <<" has died!!!" << std::endl;
-            break;
-            }
-            if( Enemy->GetHealth() <= 0)
-            {
-            std::cout << Player->getName()<< " has won !! And your enemy has been slain !!!" << std::endl;
-            break;
-            }
+        }
+        if( Player->GetHealth() <= 0 )
+        {
+        std::cout << Player->getName() <<" has died!!!" << std::endl;
+        }
+        if( Enemy->GetHealth() <= 0)
+        {
+        std::cout << Player->getName()<< " has won !! And your enemy has been slain !!!" << std::endl;
         }
 
     }

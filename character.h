@@ -3,7 +3,6 @@
 #include<string>
 #include<iostream>
 #include <time.h>
-#include "wand.h"
 class Character
 {
 public:
@@ -22,15 +21,14 @@ public:
 
 
     //getter
-
     // makes it possible to call the value of the functions above.
-    virtual std::string &getName();
-    int GetHealth();
-    int GetDamage();
-    int GetHealing();
-    virtual int GetBlock();
+    std::string &getName()     {return name;}
+    int GetHealth()            {return hp;}
+    int GetDamage()            {return dmg;}
+    int GetHealing()           {return GetHeal;}
+    int GetBlock()             {return GetBLck;}
 
-
+    bool IsAlive(int hp);
 
     // makes it possible to: attack, heal or block
     int hit(int damage);
@@ -57,7 +55,9 @@ protected:
     int GetBLck;
 
     // checks if character is alive
-    bool live = 1;
+    bool alive = 1;
+    //cheks if character has won
+    bool win = 0;
 };
 
 #endif // CHARACTER_H

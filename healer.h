@@ -2,7 +2,7 @@
 #define HEALER_H
 #include <time.h>
 #include "character.h"
-
+#include "wand.h"
 
 class Healer : public Character
 {
