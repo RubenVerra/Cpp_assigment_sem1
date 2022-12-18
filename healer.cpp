@@ -13,10 +13,10 @@ Healer::Healer(std::string name) : Character(name)
 
 void Healer::biograph(int age, int length, std::string origin, bool gender)
 {
+
     std::cout << "age: " << age <<std::endl;
     std::cout << "length: " << length <<std::endl;
     std::cout << "origin:" << origin <<std::endl;
-
 
     if(gender)
     {
@@ -27,6 +27,7 @@ void Healer::biograph(int age, int length, std::string origin, bool gender)
         std::cout << "gender:" << "female" <<std::endl;
 
     }
+    std::cout << " ------------------------------------ " << std::endl;
 }
 
 void Healer::SetHealth(int hitpoints)
