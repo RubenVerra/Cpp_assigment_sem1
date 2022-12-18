@@ -9,6 +9,26 @@ Game::Game()
 
 }
 
+bool Game::StartGame()
+{
+    bool input;
+    std::cout << " ------------------------------------ " << std::endl;
+    std::cout << "Welcome to Duel!!" << std::endl;
+    std::cout << "Press 1 to start" << std::endl;
+    std::cout << "Press 0 to stop" << std::endl;
+    std::cout << " ------------------------------------ " << std::endl;
+    std::cin >> input;
+    std::cout << " ------------------------------------ " << std::endl;
+    if(input)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
 void Game::ChooseChar()
 {
     std::cout << " Choose a character: " << std::endl;
@@ -236,6 +256,29 @@ void Game::Play()
         return;
     }
 
+}
+
+bool Game::PlayAgain()
+{
+    int inputUser;
+    std::cout << " ------------------------------------ " << std::endl;
+    std::cout << "Do you want to go again?" << std::endl;
+    std::cout << "Press 1 to restart" << std::endl;
+    std::cout << "Press 0 to stop" << std::endl;
+    std::cout << " ------------------------------------ " << std::endl;
+    std::cin >> inputUser;
+    std::cout << " ------------------------------------ " << std::endl;
+    while (inputUser > 1 || inputUser < 0 ) {
+        std::cout << "Wrong input" << std::endl;
+        std::cout << "try again" << std::endl;
+        std::cout << " ------------------------------------ " << std::endl;
+        std::cin >> inputUser;
+    }
+    if(inputUser)
+    {
+        return 1;
+    }else
+    return 0;
 }
 
 

@@ -12,13 +12,12 @@ class Game
 {
 public:
     Game();
-
+    bool StartGame();
     void ChooseChar();
     void GenerateEnemy();
-
-
     void PrintStats();
     void Play();
+    bool PlayAgain();
 
 private:
     Character *Enemy = nullptr;
