@@ -56,8 +56,10 @@ protected:
 
     // checks if character is alive
     bool alive = 1;
+
     //cheks if character has won
     bool win = 0;
+
 };
 
 #endif // CHARACTER_H

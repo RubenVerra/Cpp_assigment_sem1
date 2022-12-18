@@ -9,9 +9,8 @@ Character::Character(std::string name): name(name)
 
 Character::~Character()
 {
-    std::cout << "destruct Character" << name << std::endl;
+   // std::cout << "destruct Character" << name << std::endl;
 }
-
 
 int Character::hit(int damage)
 {

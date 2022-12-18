@@ -11,7 +11,7 @@ Game::Game()
 
 bool Game::StartGame()
 {
-    bool input;
+    int input;
     std::cout << " ------------------------------------ " << std::endl;
     std::cout << "Welcome to Duel!!" << std::endl;
     std::cout << "Press 1 to start" << std::endl;
@@ -19,12 +19,19 @@ bool Game::StartGame()
     std::cout << " ------------------------------------ " << std::endl;
     std::cin >> input;
     std::cout << " ------------------------------------ " << std::endl;
+    while (input > 1 || input < 0 ) {
+        std::cout << "Wrong input" << std::endl;
+        std::cout << "try again" << std::endl;
+        std::cout << " ------------------------------------ " << std::endl;
+        std::cin >> input;
+    }
     if(input)
     {
         return 1;
     }
     else
     {
+        std::cout << "Goodbye" << std::endl;
         return 0;
     }
 }
@@ -244,7 +251,7 @@ void Game::Play()
     }
     else if(InputUser == 2)
     {
-        std::cout<< "abort game!" << std::endl;
+        std::cout<< "goodbye" << std::endl;
         return;
 
     }
@@ -253,6 +260,9 @@ void Game::Play()
         std::cout<< "somthing went wrong" << std::endl;
         return;
     }
+
+    delete Player;
+    delete Enemy;
 
 }
 
@@ -276,6 +286,7 @@ bool Game::PlayAgain()
     {
         return 1;
     }else
+    std::cout << "Goodbye" << std::endl;
     return 0;
 }
 
