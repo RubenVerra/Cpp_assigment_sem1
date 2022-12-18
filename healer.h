@@ -8,6 +8,7 @@ class Healer : public Character
 {
 public:
     Healer(std::string name);
+    void biograph(int age = 22, int length = 183, std::string origin = "netherlands", bool gender = 0);
 
     //setters
     void SetHealth (int hp);

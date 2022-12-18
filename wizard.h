@@ -9,6 +9,8 @@ class Wizard : public Character
 {
 public:
     Wizard(std::string name);
+    void biograph(int age = 78, int length = 170, std::string origin = "england", bool gender = 1);
+
     Wand toverstok;
 
     //setters

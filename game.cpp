@@ -126,6 +126,10 @@ void Game::PrintStats()
     std::cout << "block van Player: " << Player->GetBlock() << std::endl;
     std::cout << "block van Enemy: " << Enemy->GetBlock() << std::endl;
 
+    Player->biograph();
+    Enemy->biograph();
+
+
     std::cout << std::endl;
 }
 

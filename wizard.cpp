@@ -11,6 +11,23 @@ Wizard::Wizard(std::string name) :Character(name)
 
 }
 
+void Wizard::biograph(int age, int length, std::string origin, bool gender)
+{
+    std::cout << "age: " << age <<std::endl;
+    std::cout << "length: " << length <<std::endl;
+    std::cout << "origin:" << origin <<std::endl;
+
+    if(gender)
+    {
+        std::cout << "gender:" << "male" <<std::endl;
+    }
+    else
+    {
+        std::cout << "gender:" << "female" <<std::endl;
+
+    }
+}
+
 void Wizard::SetHealth(int hitpoints)
 {
     hitpoints = rand() % 300;
