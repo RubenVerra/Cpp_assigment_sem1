@@ -13,6 +13,8 @@ public:
 
     //setter
     virtual std::string setName(const std::string &newName);
+
+    // randomly generates the amount of: health, Damage, healing and blocks of the character.
     virtual void SetHealth (int hp) = 0;
     virtual void SetDamage (int dmg) = 0;
     virtual void Sethealing (int heal) = 0;
@@ -20,6 +22,8 @@ public:
 
 
     //getter
+
+    // makes it possible to call the value of the functions above.
     virtual std::string &getName();
     int GetHealth();
     int GetDamage();
@@ -28,8 +32,8 @@ public:
 
 
 
-
-    bool hit(int damage);
+    // makes it possible to: attack, heal or block
+    int hit(int damage);
     int heal(int hitpoints);
     int BlockAttack(int block, int damage);
     int MissBlock (int block);
@@ -37,24 +41,23 @@ public:
 protected:
     std::string name;
 
-    //health
+    // holds the value of health each character has
     int hp;
     //int Gethp;
 
-    //damage
+    // holds the value of damage each character can do
     int dmg;
     //int Getdmg;
 
-    //healing
-    //int heal;
+    // holds the value of how much each character can heal
     int GetHeal;
 
-    //Block
+    // holds the amount of blocks each character has
     //int Block;
     int GetBLck;
 
-    //bool alive
-    bool alive = 1;
+    // checks if character is alive
+    bool live = 1;
 };
 
 #endif // CHARACTER_H
