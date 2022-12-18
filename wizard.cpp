@@ -6,44 +6,32 @@ Wizard::Wizard(std::string name) :Character(name)
     this->SetHealth(0);
     this->SetDamage(0);
     this->Sethealing(0);
+    this->SetBlock(0);
     this->toverstok.length = 10;
 
 }
 
-void Wizard::SetHealth(int hp)
+void Wizard::SetHealth(int hitpoints)
 {
-    hp = rand() % 300;
-    if(hp < 125)
+    hitpoints = rand() % 300;
+    if(hitpoints < 125)
     {
-      hp += 75;
+      hitpoints += 75;
     }
-     Gethp = hp;
+     hp = hitpoints;
 
 }
 
-int Wizard::GetHealth()
+void Wizard::SetDamage(int damage)
 {
-    return Gethp;
-}
-
-
-void Wizard::SetDamage(int dmg)
-{
-    dmg = rand() % 75;
-    if(dmg < 35)
+    damage = rand() % 75;
+    if(damage < 35)
     {
-        dmg += 30;
+        damage += 30;
     }
-    Getdmg = dmg;
+    dmg = damage;
 
 }
-
-int Wizard::GetDamage()
-{
-    return Getdmg;
-}
-
-
 
 void Wizard::Sethealing(int heal)
 {
@@ -51,34 +39,13 @@ void Wizard::Sethealing(int heal)
     GetHeal = heal;
 }
 
-
-int Wizard::GetHealing()
-{
-    return GetHeal;
-}
-
  void Wizard::SetBlock(int Block)
 {
-     Block = rand() % 100;
-
-     if(Block <= 45)
-     {
-         GetBLck = true;
-     }
-     else
-     {
-         GetBLck = false;
-     }
-
+     Block = rand() % 4;
+     GetBLck = Block;
 }
-
- int Wizard::GetBlock()
- {
-     return GetBLck;
- }
-
 
 Wizard::~Wizard()
 {
-    std::cout << "destruct Knight" << name << std::endl;
+    //std::cout << "destruct Knight" << name << std::endl;
 }

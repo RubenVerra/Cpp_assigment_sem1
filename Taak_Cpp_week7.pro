@@ -5,6 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
         character.cpp \
+        game.cpp \
         healer.cpp \
         knight.cpp \
         main.cpp \
@@ -12,6 +13,7 @@ SOURCES += \
 
 HEADERS += \
     character.h \
+    game.h \
     healer.h \
     knight.h \
     wand.h \

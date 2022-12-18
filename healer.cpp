@@ -1,3 +1,4 @@
+
 #include "healer.h"
 
 Healer::Healer(std::string name) : Character(name)
@@ -6,40 +7,29 @@ Healer::Healer(std::string name) : Character(name)
     this->SetHealth(0);
     this->SetDamage(0);
     this->Sethealing(0);
+    this->SetBlock(0);
 
 }
 
-void Healer::SetHealth(int hp)
+void Healer::SetHealth(int hitpoints)
 {
-    hp = rand() % 200;
-    if(hp < 50)
+    hitpoints = rand() % 200;
+    if(hitpoints < 50)
     {
-        hp += 50;
+        hitpoints += 50;
     }
-     Gethp = hp;
+     hp = hitpoints;
 }
 
-int Healer::GetHealth()
+void Healer::SetDamage(int damage)
 {
-    return Gethp;
-}
-
-
-void Healer::SetDamage(int dmg)
-{
-    dmg = rand() % 20;
-    if(dmg < 5)
+    damage = rand() % 20;
+    if(damage < 5)
     {
-        dmg += 5;
+        damage += 5;
     }
-        Getdmg = dmg;
+        dmg = damage;
 }
-
-int Healer::GetDamage()
-{
-    return Getdmg;
-}
-
 
 void Healer::Sethealing(int heal)
 {
@@ -51,38 +41,15 @@ void Healer::Sethealing(int heal)
     GetHeal = heal;
 }
 
-
-
-int Healer::GetHealing()
-{
-    return GetHeal;
-}
-
-
 void Healer::SetBlock(int Block)
 {
-    Block = rand() % 100;
-
-    if(Block <= 30)
-    {
-        GetBLck = true;
-    }
-    else
-    {
-        GetBLck = false;
-    }
-
+    Block = rand() % 5;
+    GetBLck = Block;
 }
-
-int Healer::GetBlock()
-{
-    return GetBLck;
-}
-
 
 Healer::~Healer()
 {
-    std::cout << "destruct Healer" << name << std::endl;
+   // std::cout << "destruct Healer" << name << std::endl;
 }
 
 

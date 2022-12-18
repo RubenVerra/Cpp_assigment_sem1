@@ -6,43 +6,31 @@ Knight::Knight(std::string name) :Character(name)
     this->SetHealth(0);
     this->SetDamage(0);
     this->Sethealing(0);
+    this->SetBlock(0);
 
 }
 
-void Knight::SetHealth(int hp)
+void Knight::SetHealth(int hitpoints)
 {
-    hp = rand() % 500;
-    if(hp < 200)
+    hitpoints = rand() % 500;
+    if(hitpoints < 200)
     {
-       hp += 200;
+       hitpoints += 200;
     }
-    Gethp = hp;
+    hp = hitpoints;
     //std::cout << name << "health van Knight: " << hp << std::endl;
 }
 
-int Knight::GetHealth()
+void Knight::SetDamage(int damage)
 {
-    return Gethp;
-}
-
-
-
-void Knight::SetDamage(int dmg)
-{
-    dmg = rand() % 40;
-    if(dmg < 20)
+    damage = rand() % 4;
+    if(damage < 20)
     {
-        dmg += 20;
+        damage += 20;
     }
-    Getdmg = dmg;
+    dmg = damage;
 
 }
-
-int Knight::GetDamage()
-{
-    return Getdmg;
-}
-
 
 void Knight:: Sethealing(int heal)
 {
@@ -50,33 +38,13 @@ void Knight:: Sethealing(int heal)
     GetHeal = heal;
 }
 
-
-int Knight::GetHealing()
-{
-    return GetHeal;
-}
-
 void Knight::SetBlock(int Block)
 {
-    Block = rand() % 100;
-
-    if(Block <= 20)
-    {
-        GetBLck = true;
-    }
-    else
-    {
-        GetBLck = false;
-    }
-
-}
-
-int Knight::GetBlock()
-{
-    return GetBLck;
+    Block = rand() % 4;
+    GetBLck = Block;
 }
 
 Knight::~Knight()
 {
-    std::cout << "destruct Knight" << name << std::endl;
+    //std::cout << "destruct Knight" << name << std::endl;
 }
