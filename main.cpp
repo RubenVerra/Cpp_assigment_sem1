@@ -6,19 +6,20 @@ using namespace std;
 
 int main()
 {
-
     Game *newWorld;
     newWorld = new Game();
+
     bool input;
     input = newWorld->StartGame();
-    while (input) {
+
+    while (input)
+    {
         newWorld->ChooseChar();
         newWorld->GenerateEnemy();
         newWorld->PrintStats();
         newWorld->Play();
         input = newWorld->PlayAgain();
     }
-    std::cout << "Goodbye" << std::endl;
 
     delete newWorld;
 

@@ -31,6 +31,7 @@ bool Game::StartGame()
     }
     else
     {
+        std::cout << "Goodbye" << std::endl;
         return 0;
     }
 }
@@ -252,7 +253,7 @@ void Game::Play()
     }
     else if(InputUser == 2)
     {
-        std::cout<< "abort game!" << std::endl;
+        std::cout<< "goodbye" << std::endl;
         return;
 
     }
@@ -287,6 +288,7 @@ bool Game::PlayAgain()
     {
         return 1;
     }else
+    std::cout << "Goodbye" << std::endl;
     return 0;
 }
 
