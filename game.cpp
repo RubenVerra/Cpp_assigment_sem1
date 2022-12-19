@@ -250,15 +250,15 @@ void ruben::Game::Play()
         }
         if( Player->GetHealth() <= 0 )
         {
-            std::cout << Player->getName() <<" has died!!!" << std::endl;
+            std::cout <<" " << Player->getName() <<" has died!!!" << std::endl;
         }
         else if( Enemy->GetHealth() <= 0)
         {
-            std::cout << Player->getName()<< " has won !! And your enemy has been slain !!!" << std::endl;
+            std::cout << " " <<Player->getName()<< " has won !! And your enemy has been killed !!!" << std::endl;
         }
         else if(Player->GetHealth() <= 0 && Enemy->GetHealth() <= 0)
         {
-            std::cout << Player->getName()<< " and "<< Enemy->getName()<< " have slain each other" << std::endl;
+            std::cout <<" " << Player->getName()<< " and "<< Enemy->getName()<< " have slain each other" << std::endl;
         }
 
     }
