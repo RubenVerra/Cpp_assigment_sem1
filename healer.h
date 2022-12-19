@@ -4,23 +4,25 @@
 #include "character.h"
 #include "wand.h"
 
-class Healer : public Character
+namespace ruben
 {
-public:
-    Healer(std::string name);
-    void biograph(int age, int length, std::string origin, bool gender);
+    class Healer : public Character
+    {
+    public:
+        Healer(std::string name);
+        void biograph(int age, int length, std::string origin, bool gender);
 
-    //setters
-    void SetHealth (int hp);
-    void SetDamage (int dmg);
-    void Sethealing (int heal);
-    void SetBlock(int Block);
+        //setters
+        void SetHealth (int hp);
+        void SetDamage (int dmg);
+        void Sethealing (int heal);
+        void SetBlock(int Block);
 
-    //destructor
-    virtual ~Healer();
+        //destructor
+        virtual ~Healer();
 
 
 
-};
-
+    };
+}
 #endif // HEALER_H

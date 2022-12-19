@@ -4,12 +4,12 @@
 #include "knight.h"
 #include "healer.h"
 
-Game::Game()
+ruben::Game::Game()
 {
 
 }
 
-bool Game::StartGame()
+bool ruben::Game::StartGame()
 {
     int input;
     std::cout << " ------------------------------------ " << std::endl;
@@ -36,7 +36,7 @@ bool Game::StartGame()
     }
 }
 
-void Game::ChooseChar()
+void ruben::Game::ChooseChar()
 {
     std::cout << " Choose a character: " << std::endl;
     std::cout << " *Wizard -> 1 " << std::endl;
@@ -78,7 +78,7 @@ void Game::ChooseChar()
 
 }
 
-void Game::GenerateEnemy()
+void ruben::Game::GenerateEnemy()
 {
     srand(time (NULL));
 
@@ -103,7 +103,7 @@ void Game::GenerateEnemy()
     }
 }
 
-void Game::PrintStats()
+void ruben::Game::PrintStats()
 {
     std::cout << " stats of the characters: " << std::endl;
     std::cout << std::endl;
@@ -134,7 +134,7 @@ void Game::PrintStats()
     std::cout << std::endl;
 }
 
-void Game::Play()
+void ruben::Game::Play()
 {
     std::cout << " are you ready to play?" << std::endl;
     std::cout << " yes -> 1 " << std::endl;
@@ -279,7 +279,7 @@ void Game::Play()
 
 }
 
-bool Game::PlayAgain()
+bool ruben::Game::PlayAgain()
 {
     int inputUser;
     std::cout << " ------------------------------------ " << std::endl;
