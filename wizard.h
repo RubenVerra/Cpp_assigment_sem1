@@ -4,7 +4,7 @@
 #include <time.h>
 #include "character.h"
 #include "wand.h"
-namespace ruben
+namespace Duel
 {
     class Wizard : public Character
     {

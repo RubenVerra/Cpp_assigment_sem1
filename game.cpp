@@ -4,12 +4,12 @@
 #include "knight.h"
 #include "healer.h"
 
-ruben::Game::Game()
+Duel::Game::Game()
 {
 
 }
 
-bool ruben::Game::StartGame()
+bool Duel::Game::StartGame()
 {
     int input;
     std::cout << " ------------------------------------ " << std::endl;
@@ -36,7 +36,7 @@ bool ruben::Game::StartGame()
     }
 }
 
-void ruben::Game::ChooseChar()
+void Duel::Game::ChooseChar()
 {
     std::cout << " Choose a character: " << std::endl;
     std::cout << " *Wizard -> 1 " << std::endl;
@@ -78,7 +78,7 @@ void ruben::Game::ChooseChar()
 
 }
 
-void ruben::Game::GenerateEnemy()
+void Duel::Game::GenerateEnemy()
 {
     srand(time (NULL));
 
@@ -103,7 +103,7 @@ void ruben::Game::GenerateEnemy()
     }
 }
 
-void ruben::Game::PrintStats()
+void Duel::Game::PrintStats()
 {
     std::cout << " stats of the characters: " << std::endl;
     std::cout << std::endl;
@@ -134,7 +134,7 @@ void ruben::Game::PrintStats()
     std::cout << std::endl;
 }
 
-void ruben::Game::Play()
+void Duel::Game::Play()
 {
     std::cout << " are you ready to play?" << std::endl;
     std::cout << " yes -> 1 " << std::endl;
@@ -279,7 +279,7 @@ void ruben::Game::Play()
 
 }
 
-bool ruben::Game::PlayAgain()
+bool Duel::Game::PlayAgain()
 {
     int inputUser;
     std::cout << " ------------------------------------ " << std::endl;

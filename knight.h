@@ -3,7 +3,7 @@
 
 #include <time.h>
 #include "character.h"
-namespace ruben
+namespace Duel
 {
     class Knight : public Character
     {

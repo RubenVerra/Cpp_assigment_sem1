@@ -1,7 +1,7 @@
 
 #include "healer.h"
 
-ruben::Healer::Healer(std::string name) : Character(name)
+Duel::Healer::Healer(std::string name) : Character(name)
 {
     std::cout << "create Healer: " << name << std::endl;
     this->SetHealth(0);
@@ -11,7 +11,7 @@ ruben::Healer::Healer(std::string name) : Character(name)
 
 }
 
-void ruben::Healer::biograph(int age, int length, std::string origin, bool gender)
+void Duel::Healer::biograph(int age, int length, std::string origin, bool gender)
 {
     age = 22;
     length = 180;
@@ -35,7 +35,7 @@ void ruben::Healer::biograph(int age, int length, std::string origin, bool gende
     std::cout << " ------------------------------------ " << std::endl;
 }
 
-void ruben::Healer::SetHealth(int hitpoints)
+void Duel::Healer::SetHealth(int hitpoints)
 {
     hitpoints = rand() % 200;
     if(hitpoints < 50)
@@ -46,7 +46,7 @@ void ruben::Healer::SetHealth(int hitpoints)
 
 }
 
-void ruben::Healer::SetDamage(int damage)
+void Duel::Healer::SetDamage(int damage)
 {
     damage = rand() % 20;
     if(damage < 5)
@@ -56,7 +56,7 @@ void ruben::Healer::SetDamage(int damage)
         dmg = damage;
 }
 
-void ruben::Healer::Sethealing(int heal)
+void Duel::Healer::Sethealing(int heal)
 {
     heal = rand() % 40;
     if(heal < 20)
@@ -66,13 +66,13 @@ void ruben::Healer::Sethealing(int heal)
     GetHeal = heal;
 }
 
-void ruben::Healer::SetBlock(int Block)
+void Duel::Healer::SetBlock(int Block)
 {
     Block = rand() % 5;
     GetBLck = Block;
 }
 
-ruben::Healer::~Healer()
+Duel::Healer::~Healer()
 {
    // std::cout << "destruct Healer" << name << std::endl;
 }

@@ -4,7 +4,7 @@
 #include "character.h"
 #include "wand.h"
 
-namespace ruben
+namespace Duel
 {
     class Healer : public Character
     {

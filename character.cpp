@@ -2,29 +2,29 @@
 
 
 
-ruben::Character::Character(std::string name): name(name)
+Duel::Character::Character(std::string name): name(name)
 {
 
 }
 
-ruben::Character::~Character()
+Duel::Character::~Character()
 {
    // std::cout << "destruct Character" << name << std::endl;
 }
 
-int ruben::Character::hit(int damage)
+int Duel::Character::hit(int damage)
 {
     hp -= damage;
     return hp > 0;
 }
 
-int ruben::Character::heal(int hitpoints)
+int Duel::Character::heal(int hitpoints)
 {
    hp += hitpoints;
    return hp > 0;
 }
 
-int ruben::Character::BlockAttack(int block, int damage)
+int Duel::Character::BlockAttack(int block, int damage)
 {
     if(block > 0)
     {
@@ -41,7 +41,7 @@ int ruben::Character::BlockAttack(int block, int damage)
     return 0;
 }
 
-int ruben::Character::MissBlock(int block)
+int Duel::Character::MissBlock(int block)
 {
     if(block > 0)
     {
@@ -55,12 +55,12 @@ int ruben::Character::MissBlock(int block)
     return 0;
 }
 
-std::string ruben::Character::setName(const std::string &newName)
+std::string Duel::Character::setName(const std::string &newName)
 {
     return(newName);
 }
 
-bool ruben::Character::IsAlive(int hp)
+bool Duel::Character::IsAlive(int hp)
 {
     if(hp > 0)
     {

@@ -3,7 +3,7 @@
 
 #include<iostream>
 #include<string>
-namespace ruben
+namespace Duel
 {
     class Wand
     {

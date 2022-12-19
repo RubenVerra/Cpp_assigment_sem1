@@ -4,7 +4,7 @@
 #include<iostream>
 #include<string>
 #include "character.h"
-namespace ruben
+namespace Duel
 {
     class Game
     {

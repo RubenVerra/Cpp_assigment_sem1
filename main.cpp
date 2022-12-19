@@ -2,7 +2,7 @@
 #include <time.h>
 #include "game.h"
 
-using namespace ruben;
+using namespace Duel;
 
 int main()
 {
