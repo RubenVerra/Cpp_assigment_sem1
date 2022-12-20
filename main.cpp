@@ -2,7 +2,7 @@
 #include <time.h>
 #include "game.h"
 
-using namespace std;
+using namespace Duel;
 
 int main()
 {

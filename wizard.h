@@ -4,21 +4,24 @@
 #include <time.h>
 #include "character.h"
 #include "wand.h"
-
-class Wizard : public Character
+namespace Duel
 {
-public:
-    Wizard(std::string name);
-    Wand toverstok;
+    class Wizard : public Character
+    {
+    public:
+        Wizard(std::string name);
+        void biograph(int age = 78, int length = 170, std::string origin = "england", bool gender = 1);
 
-    //setters
-    void SetHealth (int hp);
-    void SetDamage (int dmg);
-    void Sethealing (int heal);
-    void SetBlock(int Block);
+        Wand toverstok;
 
-    //destructor
-    virtual ~Wizard();
-};
+        //setters
+        void SetHealth (int hp);
+        void SetDamage (int dmg);
+        void Sethealing (int heal);
+        void SetBlock(int Block);
 
+        //destructor
+        virtual ~Wizard();
+    };
+}
 #endif // WIZARD_H

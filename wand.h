@@ -3,11 +3,12 @@
 
 #include<iostream>
 #include<string>
-
-class Wand
+namespace Duel
 {
-public:
-    int length;
-};
-
+    class Wand
+    {
+    public:
+        int length;
+    };
+}
 #endif // WAND_H

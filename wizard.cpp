@@ -1,6 +1,6 @@
 #include "wizard.h"
 
-Wizard::Wizard(std::string name) :Character(name)
+Duel::Wizard::Wizard(std::string name) :Character(name)
 {
     std::cout << "create Wizard: " << name << std::endl;
     this->SetHealth(0);
@@ -11,7 +11,31 @@ Wizard::Wizard(std::string name) :Character(name)
 
 }
 
-void Wizard::SetHealth(int hitpoints)
+void Duel::Wizard::biograph(int age, int length, std::string origin, bool gender)
+{
+    age = 76;
+    length = 170;
+    origin = " Italy";
+    gender = 1;
+
+    std::cout << " age: " << age <<std::endl;
+    std::cout << " length: " << length <<std::endl;
+    std::cout << " origin: " << origin <<std::endl;
+
+    if(gender)
+    {
+        std::cout << " gender: " << "male" <<std::endl;
+    }
+    else
+    {
+        std::cout << " gender: " << "female" <<std::endl;
+
+    }
+    std::cout << " ------------------------------------ " << std::endl;
+
+}
+
+void Duel::Wizard::SetHealth(int hitpoints)
 {
     hitpoints = rand() % 300;
     if(hitpoints < 125)
@@ -22,7 +46,7 @@ void Wizard::SetHealth(int hitpoints)
 
 }
 
-void Wizard::SetDamage(int damage)
+void Duel::Wizard::SetDamage(int damage)
 {
     damage = rand() % 75;
     if(damage < 35)
@@ -33,19 +57,19 @@ void Wizard::SetDamage(int damage)
 
 }
 
-void Wizard::Sethealing(int heal)
+void Duel::Wizard::Sethealing(int heal)
 {
     heal = 0;
     GetHeal = heal;
 }
 
- void Wizard::SetBlock(int Block)
+ void Duel::Wizard::SetBlock(int Block)
 {
      Block = rand() % 4;
      GetBLck = Block;
 }
 
-Wizard::~Wizard()
+Duel::Wizard::~Wizard()
 {
     //std::cout << "destruct Knight" << name << std::endl;
 }

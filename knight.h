@@ -3,20 +3,23 @@
 
 #include <time.h>
 #include "character.h"
-
-class Knight : public Character
+namespace Duel
 {
-public:
-    Knight(std::string name);
+    class Knight : public Character
+    {
+    public:
+        Knight(std::string name);
+        void biograph(int age = 37, int length = 189, std::string origin = "germany", bool gender = 1);
 
-    //setters
-    void SetHealth (int hp);
-    void SetDamage (int dmg);
-    void Sethealing (int heal);
-    void SetBlock(int Block);
 
-    //destructor
-    virtual ~Knight();
-};
+        //setters
+        void SetHealth (int hp);
+        void SetDamage (int dmg);
+        void Sethealing (int heal);
+        void SetBlock(int Block);
 
+        //destructor
+        virtual ~Knight();
+    };
+}
 #endif // KNIGHT_H
